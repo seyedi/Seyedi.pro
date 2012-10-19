@@ -1,0 +1,75 @@
+/* guides 
+***********************************/
+body {
+	background-image      : url('images/pattern_bg.png'),url('images/background.png'); /*does not work in IE*/
+	background-repeat     : repeat;
+	background-position   : top left;
+	background-attachment : fixed,fixed;
+}
+
+/* Header
+***********************************/
+
+div.header-container {
+	min-height : 90px;
+	background       : rgb(0,0,0); /* The Fallback */
+	background-color : rgba(0,0,0,0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);  /*For IE*/
+}
+
+header {
+	width      : 950px;
+	min-height : 90px;
+	margin     : 0 auto; 
+}
+
+/* Content
+***********************************/
+
+div.content-container {
+	min-height : 500px;
+}
+
+div.content {
+	padding-top : 70px;
+	width 	    : 950px;
+	min-height  : 430px;
+	margin      : 0 auto;
+	overflow	: hidden;
+}
+
+div.content div.train {
+	width 	 : 4000px;
+	height   : 400px;
+}
+
+div.content div.train > div {
+	float : left;
+	width : 950px;
+	height: 400px;
+}
+
+div.content div.train > div > div {
+	float : left;
+	width : 150px;
+	height: 90px;
+	background-color : rgba(255,255,0,0.5);
+	margin : 0 8px 10px 0;
+}
+
+/* Footer
+***********************************/
+
+footer {
+	min-height : 40px;
+	background       : rgb(0,0,0); /* The Fallback */
+	background-color : rgba(0,0,0,0.5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);  /*For IE*/
+}
+
+footer div.footer{
+	width 	   : 950px;
+	min-height : 40px;
+	margin     : 0 auto; 
+
+}

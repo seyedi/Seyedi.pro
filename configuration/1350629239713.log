@@ -1,0 +1,22 @@
+!SESSION 2012-10-19 10:17:18.479 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_32
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fa_IR
+Framework arguments:  -product org.xmind.cathy.product H:\Repository\Seyedi.pro\Project+MindMap.xmind
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.xmind.cathy.product -data ../Commons/data/workspace-cathy H:\Repository\Seyedi.pro\Project+MindMap.xmind
+
+!ENTRY org.eclipse.osgi 4 0 2012-10-19 10:17:20.547
+!MESSAGE Application error
+!STACK 1
+java.lang.IllegalStateException: Unable to acquire application service. Ensure that the org.eclipse.core.runtime bundle is resolved and started (see config.ini).
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:74)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
