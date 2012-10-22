@@ -11,36 +11,28 @@
 </head>
 <body>
 	<div class="header-container">
-		<header></header>
+		<header>
+			<nav>
+				<!-- <h1 class="logo"><a href="#">seyedi</a></h1> -->
+				<menu class="cover">
+					<li><a href="">home</a></li>
+					<li><a href="">portfolio</a></li>
+					<li><a href="">about</a></li>
+					<li><a href="">contact</a></li>
+				</menu>
+			</nav>
+		</header>
 	</div>
 	<div class="content-container">
 		<div class="content">
-			<div class="cover train">
+			<div id="trainn" class="cover train">
 				<div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
-					<div></div>
+					<script type="text/javascript">
+						var slidesLen = 24;
+						for(var i=1;i<=slidesLen;i++){
+							document.write("<div style=\"background-image:url('images/portfolio/pic"+i+".jpg');\"><a href=\"#\"><span></span></a></div>");
+						}
+					</script>
 				</div>
 				<div style="background-color : red;">
 					
@@ -53,6 +45,8 @@
 				</div>
 			</div>
 		</div>
+		<div id="prv" class="previous"></div>
+		<div id="nxt" class="next"></div>
 	</div>
 	<!-- <footer>
 		<div class="footer"></div>

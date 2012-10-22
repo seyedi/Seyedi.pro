@@ -23,6 +23,63 @@ header {
 	margin     : 0 auto; 
 }
 
+nav {
+	width    : 950px;
+	position : relative;
+}
+
+nav h1.logo {
+	position : absolute;
+	left     : 0;
+	top      : 0;
+	background-color : #000;
+}
+
+nav h1.logo a {
+	text-transform : capitalize;
+	text-decoration: none;
+	font-family    : Helvetica, sans-serif;
+	display        : block;
+	padding        : 30px;
+	color          : #aaa;
+}
+
+menu {
+	width  : 520px;
+	margin : 0 auto;
+}
+
+nav li {
+	float : left;
+	padding : 40px 0 0 20px;
+	margin-left : 50px;
+	background-image : url('images/tools/slash.png');
+	background-repeat: no-repeat;
+	background-position : left top;
+}
+
+nav li:first-child {
+	margin-left : 0;
+}
+
+nav li a {
+	text-transform : uppercase;
+	text-decoration: none;
+	font-family    : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 15px;
+	display : block;
+	color   : #aaa;
+}
+
+nav li:hover {
+	background-position : 0 -61px;
+
+}
+
+
+nav li a:hover {
+	color : #FFF;
+}
 /* Content
 ***********************************/
 
@@ -31,16 +88,19 @@ div.content-container {
 }
 
 div.content {
-	padding-top : 70px;
 	width 	    : 950px;
-	min-height  : 430px;
+	min-height  : 500px;
 	margin      : 0 auto;
 	overflow	: hidden;
+	position    : relative;
 }
 
 div.content div.train {
-	width 	 : 4000px;
+	width 	 : 3800px;
 	height   : 400px;
+	position : absolute;
+	top  : 70px;
+	left : 0;
 }
 
 div.content div.train > div {
@@ -53,10 +113,72 @@ div.content div.train > div > div {
 	float : left;
 	width : 150px;
 	height: 90px;
-	background-color : rgba(255,255,0,0.5);
 	margin : 0 8px 10px 0;
+	background-repeat : no-repeat;
+	background-size   : 100% 100%;
+	-webkit-transition : 1500ms;
+	-moz-transition    : 1500ms;
+	-o-transition      : 1500ms;
+	-ms-transition     : 1500ms;
+	opacity : 0.5;
 }
 
+div.content div.train > div > div > a {
+	display : block;
+	width   : 150px;
+	height  : 90px;
+	position: relative;
+	overflow: hidden;
+}
+
+div.content div.train > div > div > a > span {
+	display 	: block;
+	position	: absolute;
+	top     	: 100%;
+	left    	: 0;
+	width 		: 100%;
+	height  	: 50px;
+	background       : #000; /* The Fallback */
+	background-color : rgba(0,0,0,0.6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);  /*For IE*/
+	-webkit-transition :  100ms ease-in;
+	-moz-transition    :  100ms ease-in;
+	-o-transition      :  100ms ease-in;
+	-ms-transition     :  100ms ease-in;
+}
+
+div.content div.train > div > div:hover {
+	opacity : 1;
+	-webkit-transition : 0;
+	-moz-transition    : 0;
+	-o-transition      : 0;
+	-ms-transition     : 0;
+}
+
+
+
+div.content div.train > div > div > a:hover > span {
+	top  : 50px;
+}
+
+div.next , div.previous {
+	position : absolute;
+	top 	 : 300px;
+	width    : 95px;
+	height   : 90px;
+	cursor   : pointer;
+	z-index  : 2;
+}
+
+div.next {
+	right     : 40px;
+	background-image : url('images/tools/nxt.png');
+}
+
+div.previous {
+	background-image : url('images/tools/prv.png');
+	left      : 40px;
+}
 /* Footer
 ***********************************/
 
