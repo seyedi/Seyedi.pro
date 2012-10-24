@@ -16,6 +16,6 @@ window.onload=function(){
 
 
 function go2slide(n){
-		train.style.left=(-950*n)+'px';
+		train.style.left=(-900*n)+'px';
 		currentSlide=n;
 	}

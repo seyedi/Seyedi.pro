@@ -1,10 +1,22 @@
 /* guides 
 ***********************************/
 body {
-	background-image      : url('images/pattern_bg.png'),url('images/background.png'); /*does not work in IE*/
+	background-image      : url('images/background.png'); /*does not work in IE*/
 	background-repeat     : repeat;
 	background-position   : top left;
-	background-attachment : fixed,fixed;
+	/*background-attachment : fixed,fixed;*/
+}
+
+div.noise {
+	background-image    : url('images/pattern_bg.png');
+	background-repeat   : repeat;
+	background-position : left top;
+	position            : fixed;
+	top                 : 0;
+	left                : 0;
+	bottom              : 0;
+	right               : 0;
+	z-index             : -1;
 }
 
 /* Header
@@ -84,11 +96,14 @@ nav li a:hover {
 ***********************************/
 
 div.content-container {
+	position   : relative;
+	width      : 970px;
 	min-height : 500px;
+	margin     : 0 auto;
 }
 
 div.content {
-	width 	    : 950px;
+	width 	    : 900px;
 	min-height  : 500px;
 	margin      : 0 auto;
 	overflow	: hidden;
@@ -96,23 +111,27 @@ div.content {
 }
 
 div.content div.train {
-	width 	 : 3800px;
+	width 	 : 3000px;
 	height   : 400px;
 	position : absolute;
-	top  : 70px;
-	left : 0;
+	top      : 70px;
+	left     : 0;
+	-webkit-transition :  300ms ease-in;
+	-moz-transition    :  200ms ease-in;
+	-o-transition      :  200ms ease-in;
+	-ms-transition     :  200ms ease-in;
 }
 
 div.content div.train > div {
 	float : left;
-	width : 950px;
-	height: 400px;
+	width : 900px;
+	height: 440px;
 }
 
 div.content div.train > div > div {
 	float : left;
-	width : 150px;
-	height: 90px;
+	width : 172px;
+	height: 100px;
 	margin : 0 8px 10px 0;
 	background-repeat : no-repeat;
 	background-size   : 100% 100%;
@@ -125,8 +144,8 @@ div.content div.train > div > div {
 
 div.content div.train > div > div > a {
 	display : block;
-	width   : 150px;
-	height  : 90px;
+	width   : inherit;
+	height  : inherit;
 	position: relative;
 	overflow: hidden;
 }
@@ -136,7 +155,7 @@ div.content div.train > div > div > a > span {
 	position	: absolute;
 	top     	: 100%;
 	left    	: 0;
-	width 		: 100%;
+	width 		: inherit;
 	height  	: 50px;
 	background       : #000; /* The Fallback */
 	background-color : rgba(0,0,0,0.6);
@@ -163,21 +182,21 @@ div.content div.train > div > div > a:hover > span {
 
 div.next , div.previous {
 	position : absolute;
-	top 	 : 300px;
-	width    : 95px;
+	top 	 : 245px;
+	width    : 25px;
 	height   : 90px;
 	cursor   : pointer;
 	z-index  : 2;
 }
 
 div.next {
-	right     : 40px;
 	background-image : url('images/tools/nxt.png');
+	right     : 0;
 }
 
 div.previous {
 	background-image : url('images/tools/prv.png');
-	left      : 40px;
+	left      : -10px;
 }
 /* Footer
 ***********************************/
