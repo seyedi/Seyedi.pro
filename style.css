@@ -1,10 +1,25 @@
+@font-face {
+  font-family: 'OpenSans-ExtraBold';
+  src: url("font/OpenSans-ExtraBold.ttf");
+  font-weight : normal;
+  font-style  : normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  src: url("font/OpenSans-Regular.ttf");
+  font-weight : normal;
+  font-style  : normal;
+}
+
 /* guides 
 ***********************************/
-body {
-	background-image      : url('images/background.png'); /*does not work in IE*/
-	background-repeat     : repeat;
-	background-position   : top left;
-	/*background-attachment : fixed,fixed;*/
+body.home {
+
+}
+
+body.portfolio {
+
 }
 
 div.noise {
@@ -17,6 +32,25 @@ div.noise {
 	bottom              : 0;
 	right               : 0;
 	z-index             : -1;
+}
+
+body div.backimg {
+	position              : fixed;
+	top                   : 0;
+	left                  : 0;
+	bottom                : 0;
+	right                 : 0;
+	background-size       : 100% 100%;
+	background-attachment : fixed;
+	z-index               : -2;
+}
+
+body.home div.backimg {
+	background-image      : url('images/background.jpg');
+}
+
+body.portfolio div.backimg {
+	background-image      : url('images/background.png');
 }
 
 /* Header
@@ -79,18 +113,24 @@ nav li a {
 	text-decoration: none;
 	font-family    : Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size : 15px;
-	display : block;
-	color   : #aaa;
+	display   : block;
+	color     : #aaa;
+	-webkit-transition :  200ms ease-in;
+	-moz-transition    :  200ms ease-in;
+	-o-transition      :  200ms ease-in;
+	-ms-transition     :  200ms ease-in;
 }
 
-nav li:hover {
-	background-position : 0 -61px;
-
+nav li a.active {
+	color : #FFF;
 }
-
 
 nav li a:hover {
 	color : #FFF;
+	-webkit-transition :  200ms ease-in;
+	-moz-transition    :  200ms ease-in;
+	-o-transition      :  200ms ease-in;
+	-ms-transition     :  200ms ease-in;
 }
 /* Content
 ***********************************/
@@ -100,6 +140,99 @@ div.content-container {
 	width      : 970px;
 	min-height : 500px;
 	margin     : 0 auto;
+}
+
+body > div.content h1 {
+
+	/*color: #fff9d6;*/
+	font-weight:bold;
+	text-shadow:0px 0px 0 rgb(202,202,202),1px 1px 0 rgb(158,158,158), 2px 2px 0 rgb(115,115,115),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
+	margin         : 100px 0 20px 0;
+	font           : 75px "OpenSans-ExtraBold", Arial, Helvetica, Geneva, sans-serif;
+	color          : #FFF;
+	text-align     : center;
+	/*text-shadow    : 0px 1px 3px rgba(0,0,0,0.2);*/
+	text-transform : capitalize;
+}
+
+body > div.content div.links {
+	width    : 348px;
+	margin   : 50px auto;
+}
+body.home > div.content ul li {
+	margin-left   : 20px;
+	float         : left;
+	text-align    : center;
+	font          : 15px "OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	color         : #FFF;
+	text-transform: capitalize;
+	/*text-shadow   : 0px 1px 3px rgba(0,0,0,0.2);*/
+}
+
+body.home > div.content h3 {
+	text-align    : center;
+	margin        : 50px 0;
+	font          : 15px "OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	color         : #FFF;
+} 
+
+body.home > div.content ul li a {
+	margin-bottom   : 10px;
+	display         : block;
+	width           : 72px;
+	height          : 72px;
+	border-radius   : 36px;
+	background-image: url('images/links.png');
+}
+
+body.home > div.content ul li.facebook {
+	margin-left : 0;
+}
+
+body.home > div.content ul li.facebook a {
+	background-position : 0px 0;
+}
+
+body.home > div.content ul li.flickr a {
+	background-position : -72px 0;
+}
+
+body.home > div.content ul li.twitter a {
+	background-position : -144px 0;
+}
+
+body.home > div.content ul li.google a {
+	background-position : -216px 0;
+}
+
+body.home > div.content ul li.facebook a:hover {
+	background-position : 0px -72px;
+}
+
+body.home > div.content ul li.flickr a:hover {
+	background-position : -72px -72px;
+}
+
+body.home > div.content ul li.twitter a:hover {
+	background-position : -144px -72px;
+}
+
+body.home > div.content ul li.google a:hover {
+	background-position : -216px -72px;
+}
+
+body.home > div.content ul li a:hover {
+	background-position-Y : -72px;
+}
+
+
+body > div.content h2 {
+	font           : 30px "OpenSans-Regular", Arial, Helvetica, Geneva, sans-serif;
+	font-weight    : 600;
+	color          : #FFF;
+	text-align     : center;
+	text-shadow    : 0px 1px 3px rgba(0,0,0,0.2);
+	text-transform : uppercase;
 }
 
 div.content {
@@ -134,12 +267,13 @@ div.content div.train > div > div {
 	height: 100px;
 	margin : 0 8px 10px 0;
 	background-repeat : no-repeat;
-	background-size   : 100% 100%;
+	background-size   : 100% 100%; /* does not work in IE */
 	-webkit-transition : 1500ms;
 	-moz-transition    : 1500ms;
 	-o-transition      : 1500ms;
 	-ms-transition     : 1500ms;
 	opacity : 0.5;
+	filter:alpha(opacity=50); /* For IE8 and earlier */
 }
 
 div.content div.train > div > div > a {
@@ -168,6 +302,7 @@ div.content div.train > div > div > a > span {
 
 div.content div.train > div > div:hover {
 	opacity : 1;
+	filter:alpha(opacity=100); /* For IE8 and earlier */
 	-webkit-transition : 0;
 	-moz-transition    : 0;
 	-o-transition      : 0;
@@ -182,11 +317,14 @@ div.content div.train > div > div > a:hover > span {
 
 div.next , div.previous {
 	position : absolute;
-	top 	 : 245px;
-	width    : 25px;
-	height   : 90px;
+	width    : 100px;
+	height   : 400px;
 	cursor   : pointer;
 	z-index  : 2;
+	opacity  : 0.5;
+	filter:Alpha(opacity=50); /* IE8 and earlier */
+	background-repeat : no-repeat;
+	background-position : center center;
 }
 
 div.next {
@@ -196,7 +334,12 @@ div.next {
 
 div.previous {
 	background-image : url('images/tools/prv.png');
-	left      : -10px;
+	left      : 0;
+}
+
+div.next:hover , div.previous:hover {
+	opacity  : 1;
+	filter:Alpha(opacity=100); /* IE8 and earlier */
 }
 /* Footer
 ***********************************/
@@ -205,7 +348,7 @@ footer {
 	min-height : 40px;
 	background       : rgb(0,0,0); /* The Fallback */
 	background-color : rgba(0,0,0,0.5);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);  /*For IE*/
+	/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000);  /*For IE*/*/
 }
 
 footer div.footer{

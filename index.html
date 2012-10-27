@@ -2,62 +2,41 @@
 <html lang="en-UK">
 <head>
 	<meta charset="UTF-8" />
-	<title>My WebPage  | Home</title>
+	<title>Seyedi  | Home</title>
 	<link rel="shortcut icon" href="image/favicon.ico" />
 	<link rel="stylesheet" type="text/css" href="1styles.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="html5shiv.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body class="home">
 	<div class="header-container">
 		<header>
 			<nav>
 				<!-- <h1 class="logo"><a href="#">seyedi</a></h1> -->
 				<menu class="cover">
-					<li><a href="">home</a></li>
-					<li><a href="">portfolio</a></li>
-					<li><a href="">about</a></li>
-					<li><a href="">contact</a></li>
+					<li><a href="#" class="active">home</a></li>
+					<li><a href="portfolio.html">portfolio</a></li>
+					<li><a href="http://seyedi.github.com">about</a></li>
+					<li><a href="#">contact</a></li>
 				</menu>
 			</nav>
 		</header>
 	</div>
-	<div class="content-container">
-		<div class="content">
-			<div id="trainn" class="cover train">
-				<div>
-					<script type="text/javascript">
-						var slidesLen = 20;
-						for(var i=1;i<=slidesLen;i++){
-							document.write("<div style=\"background-image:url('images/portfolio/pic"+i+".jpg');\"><a href=\"#\"><span></span></a></div>");
-						}
-					</script>
-				</div>
-				<div>
-					<script type="text/javascript">
-						var slidesLen = 40;
-						for(var i=21;i<=slidesLen;i++){
-							document.write("<div style=\"background-image:url('images/portfolio/pic"+i+".jpg');\"><a href=\"#\"><span></span></a></div>");
-						}
-					</script>
-				</div>
-				<div>
-					<script type="text/javascript">
-						var slidesLen = 60;
-						for(var i=41;i<=slidesLen;i++){
-							document.write("<div style=\"background-image:url('images/portfolio/pic"+i+".jpg');\"><a href=\"#\"><span></span></a></div>");
-						}
-					</script>
-				</div>
-			</div>
+	<div class="content">
+		<h1>seyed mojtaba seyedi</h1>
+		<h2>web design</h2>
+		<div class="cover links">
+			<ul>
+				<li class="facebook"><a href="#"></a>facebook</li>
+				<li class="flickr"><a   href="#"></a>flickr</li>
+				<li class="twitter"><a  href="#"></a>twitter</li>
+				<li class="google"><a  href="#"></a>google+</li>
+			</ul>
 		</div>
-		<div id="prv" class="previous"></div>
-		<div id="nxt" class="next"></div>
+		<h3>seyedi.mo@gmail.com</h3>
 	</div>
-	<!-- <footer>
-		<div class="footer"></div>
-	</footer> -->
 	<div class="noise"></div>
+	<div class="backimg"></div>
 </body>
 </html>
