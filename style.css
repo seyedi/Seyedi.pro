@@ -40,13 +40,13 @@ body div.backimg {
 	left                  : 0;
 	bottom                : 0;
 	right                 : 0;
-	background-size       : 100% 100%;
+	background-size       : cover;
 	background-attachment : fixed;
 	z-index               : -2;
 }
 
 body.home div.backimg {
-	background-image      : url('images/background.jpg');
+	background-image      : url('images/background.png');
 }
 
 body.portfolio div.backimg {
@@ -144,20 +144,18 @@ div.content-container {
 
 body > div.content h1 {
 
-	/*color: #fff9d6;*/
-	font-weight:bold;
-	text-shadow:0px 0px 0 rgb(202,202,202),1px 1px 0 rgb(158,158,158), 2px 2px 0 rgb(115,115,115),3px 3px 2px rgba(0,0,0,0.6),3px 3px 1px rgba(0,0,0,0.5),0px 0px 2px rgba(0,0,0,.2);
-	margin         : 100px 0 20px 0;
-	font           : 75px "OpenSans-ExtraBold", Arial, Helvetica, Geneva, sans-serif;
-	color          : #FFF;
+	font-weight    : bold;
+	text-shadow    : 0px 0px 0 rgb(216,216,216),1px 1px 0 rgb(187,187,187),2px 2px 0 rgb(158,158,158), 3px 3px 0 rgb(129,129,129),4px 4px 3px rgba(0,0,0,0.45),4px 4px 1px rgba(0,0,0,0.5),0px 0px 3px rgba(0,0,0,.2);
+	color          : white;
+	margin         : 80px 0 20px 0;
+	font           : 65px "OpenSans-ExtraBold", Arial, Helvetica, Geneva, sans-serif;
 	text-align     : center;
-	/*text-shadow    : 0px 1px 3px rgba(0,0,0,0.2);*/
 	text-transform : capitalize;
 }
 
 body > div.content div.links {
 	width    : 348px;
-	margin   : 50px auto;
+	margin   : 70px auto;
 }
 body.home > div.content ul li {
 	margin-left   : 20px;
@@ -190,19 +188,19 @@ body.home > div.content ul li.facebook {
 }
 
 body.home > div.content ul li.facebook a {
-	background-position : 0px 0;
+	background-position : -2px 0;
 }
 
 body.home > div.content ul li.flickr a {
-	background-position : -72px 0;
+	background-position : -74px 0;
 }
 
 body.home > div.content ul li.twitter a {
-	background-position : -144px 0;
+	background-position : -146px 0;
 }
 
 body.home > div.content ul li.google a {
-	background-position : -216px 0;
+	background-position : -218px 0;
 }
 
 body.home > div.content ul li.facebook a:hover {
@@ -322,7 +320,6 @@ div.next , div.previous {
 	cursor   : pointer;
 	z-index  : 2;
 	opacity  : 0.5;
-	filter:Alpha(opacity=50); /* IE8 and earlier */
 	background-repeat : no-repeat;
 	background-position : center center;
 }
@@ -339,7 +336,6 @@ div.previous {
 
 div.next:hover , div.previous:hover {
 	opacity  : 1;
-	filter:Alpha(opacity=100); /* IE8 and earlier */
 }
 /* Footer
 ***********************************/
@@ -355,5 +351,58 @@ footer div.footer{
 	width 	   : 950px;
 	min-height : 40px;
 	margin     : 0 auto; 
+}
 
+/* Contact page
+--------------------------------- */
+
+
+div.map , div.form {
+	width : 430px;
+	height: 450px;
+}
+
+div.map {
+	border : 1px dashed yellow;
+}
+
+div.map , div.form > form > * {
+	margin : 0 0 10px 20px;
+	font   : 17px "Comic Sans MS";
+	background-repeat: no-repeat;
+}
+
+div.form textarea {
+	width   : 270px;
+	background-color : #000;
+	background-color : rgba(0,0,0,0.5);
+	color            : yellow;
+	background-image : url('images/contact.png');
+	background-position : 0 -75px;
+	padding-left : 30px;
+	border  : 1px dashed yellow;
+
+}
+
+div.form input[type="text"] {
+	border  : 1px dashed yellow;
+	width   : 270px;
+	height  : 25px;
+	color   : yellow;
+	background-color : #000;
+	background-image : url('images/contact.png');
+	background-color : rgba(0,0,0,0.5);
+	padding-left        : 30px;
+}
+
+div.form input[name="mail"] {
+	background-position : 0 -25px;
+}
+
+div.form input[name="phone"] {
+	background-position : 0 -50px;
+}
+
+div.form input[type="submit"] {
+	margin-left : 180px;
 }
